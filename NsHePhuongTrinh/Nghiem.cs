@@ -36,6 +36,10 @@ namespace NsHePhuongTrinh
                 }
             }
         }
+        public Nghiem(string filePath) : base(filePath)
+        {
+
+        }
         #region Member
         public Status status = Status.VoNghiem;
         public List<LoaiNghiem> Loai { get; set; } = new List<LoaiNghiem>();

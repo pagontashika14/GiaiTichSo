@@ -172,7 +172,7 @@ namespace NsMaTran
             }
             return A;
         }
-        public void TimPhanTuTroi(Dictionary<int,int> boQua, ref int i, ref int j)
+        public void TimPhanTuTroi(Dictionary<int, int> boQua, ref int i, ref int j)
         {
             double bigNum = 0;
             var boQuaHang = boQua.Keys.ToList();
@@ -253,9 +253,58 @@ namespace NsMaTran
             }
             this.Copy(B);
         }
+        public MaTran CongVoiMaTran(MaTran B)
+        {
+            if (M == B.M && N == B.N)
+            {
+                MaTran C = new MaTran(M,N);
+                for (int i = 0; i < M; i++)
+                {
+                    for (int j = 0; j < N; j++)
+                    {
+                        C[i, j] = this[i, j] + B[i, j];
+                    }
+                }
+                return C;
+            }
+            else
+            {
+                throw new Exception("Không cộng được");
+            }
+        }
+        public MaTran NhanVoiMaTran(MaTran B)
+        {
+            if (N == B.M)
+            {
+                var C = new MaTran(M, B.N);
+                for (int i = 0; i < C.M; i++)
+                {
+                    for (int j = 0; j < C.N; j++)
+                    {
+                        for (int k = 0; k < N; k++)
+                        {
+                            C[i, j] += this[i, k] * B[k, j];
+                        }
+                    }
+                }
+                return C;
+            }
+            else
+            {
+                throw new Exception("không nhân được");
+            }
+        }
+        public static MaTran operator + (MaTran A,MaTran B)
+        {
+            return A.CongVoiMaTran(B);
+        }
+        public static MaTran operator * (MaTran A,MaTran B)
+        {
+            return A.NhanVoiMaTran(B);
+        }
         #endregion
         #region Private Method
-        protected void newMaTran(int m,int n)
+        protected void newMaTran(int m, int n)
         {
             MT = new List<List<double>>();
             for (int i = 0; i < m; i++)
