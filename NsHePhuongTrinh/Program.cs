@@ -18,8 +18,8 @@ namespace NsHePhuongTrinh
             Console.WriteLine(he.Gauss().ToString());
             Console.WriteLine("--------- Phương pháp Gauss-Jordan ---");
             Console.WriteLine(he.GaussJordan().ToString());
-            Console.WriteLine("--------- Phương pháp lặp đơn --------");
-            Console.WriteLine(he.LapDon(0.02).ToString());
+            Console.WriteLine("--------- Phương pháp lặp Jacobi -----");
+            Console.WriteLine(he.LapJacobi(0.02).ToString());
             Console.ReadKey();
         }
     }
