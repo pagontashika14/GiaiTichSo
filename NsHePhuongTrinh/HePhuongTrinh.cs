@@ -151,7 +151,7 @@ namespace NsHePhuongTrinh
             }
             return new Nghiem(0, 0);
         }
-        public Nghiem LapDon(double dkDung)
+        public Nghiem LapJacobi(double dkDung)
         {
             var mt = MT.Copy();
             if (mt.M != mt.N)
