@@ -1,0 +1,6 @@
+C:\Users\pagon\Desktop\GiaiTichSo\NsMaTran\bin\Debug\NsMaTran.exe.config
+C:\Users\pagon\Desktop\GiaiTichSo\NsMaTran\bin\Debug\NsMaTran.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsMaTran\bin\Debug\NsMaTran.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsMaTran\obj\Debug\NsMaTran.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsMaTran\obj\Debug\NsMaTran.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsMaTran\obj\Debug\NsMaTran.csprojResolveAssemblyReference.cache

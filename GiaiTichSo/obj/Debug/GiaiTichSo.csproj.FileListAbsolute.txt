@@ -1,0 +1,5 @@
+C:\Users\pagon\Desktop\GiaiTichSo\GiaiTichSo\bin\Debug\GiaiTichSo.exe
+C:\Users\pagon\Desktop\GiaiTichSo\GiaiTichSo\bin\Debug\GiaiTichSo.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\GiaiTichSo\obj\Debug\GiaiTichSo.csprojResolveAssemblyReference.cache
+C:\Users\pagon\Desktop\GiaiTichSo\GiaiTichSo\obj\Debug\GiaiTichSo.exe
+C:\Users\pagon\Desktop\GiaiTichSo\GiaiTichSo\obj\Debug\GiaiTichSo.pdb
