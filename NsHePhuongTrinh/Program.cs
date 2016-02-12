@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using NsMaTran;
+
 namespace NsHePhuongTrinh
 {
     class Program
@@ -10,13 +12,14 @@ namespace NsHePhuongTrinh
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            var he = new HePhuongTrinh(@"HePhuongTrinh\Gauss\he.txt");
-            //he.Gauss();
+            var he = new HePhuongTrinh(@"HePhuongTrinh\he.txt");
             Console.WriteLine(he.ToString());
             Console.WriteLine("--------- Phương pháp Gauss ----------");
             Console.WriteLine(he.Gauss().ToString());
             Console.WriteLine("--------- Phương pháp Gauss-Jordan ---");
             Console.WriteLine(he.GaussJordan().ToString());
+            Console.WriteLine("--------- Phương pháp lặp đơn --------");
+            Console.WriteLine(he.LapDon(0.02).ToString());
             Console.ReadKey();
         }
     }

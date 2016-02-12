@@ -36,11 +36,45 @@ namespace NsHePhuongTrinh
                 }
             }
         }
+        public Nghiem(string filePath) : base(filePath)
+        {
+
+        }
+        public Nghiem(MaTran mt) : base(mt)
+        {
+            if (mt.M != 0)
+            {
+                if (mt.N > 1)
+                {
+                    status = Status.VoSoNghiem;
+                }
+                else
+                {
+                    status = Status.NghiemDuyNhat;
+                }
+            }
+        }
         #region Member
         public Status status = Status.VoNghiem;
         public List<LoaiNghiem> Loai { get; set; } = new List<LoaiNghiem>();
         #endregion
         #region Public Method
+        public new Nghiem Copy()
+        {
+            var n = new Nghiem(status, M);
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    n[i, j] = this[i, j];
+                }
+                if (status == Status.VoSoNghiem)
+                {
+                    n.Loai[i] = Loai[i];
+                }
+            }
+            return n;
+        }
         public override string ToString()
         {
             string s = "";

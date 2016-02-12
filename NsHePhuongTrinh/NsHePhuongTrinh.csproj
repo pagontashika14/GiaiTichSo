@@ -50,6 +50,10 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{8d2fc3f7-42f4-44ab-b68d-7d9fa46f6d73}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NsMaTran\NsMaTran.csproj">
       <Project>{841767bf-afab-4447-9376-dbb886948234}</Project>
       <Name>NsMaTran</Name>

@@ -8,10 +8,9 @@ namespace NsMaTran
     {
         static void Main(string[] args)
         {
-            var a = new MaTran("test.txt");
-            a.MTGhep = new MaTran("test2.txt");
-            var b = a.DuaVeMaTranBacThang();
-            Console.WriteLine(b.ToString());
+            var a = new MaTran(@"MaTran\a.txt");
+            var b = new MaTran(@"MaTran\b.txt");
+            Console.WriteLine((a * b).ToString());
             Console.ReadKey();
         }
     }

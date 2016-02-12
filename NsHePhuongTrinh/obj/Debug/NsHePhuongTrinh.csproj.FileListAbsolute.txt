@@ -6,3 +6,5 @@ C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\bin\Debug\NsMaTran.pdb
 C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.csprojResolveAssemblyReference.cache
 C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.exe
 C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\bin\Debug\Common.dll
+C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\bin\Debug\Common.pdb
