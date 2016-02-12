@@ -24,6 +24,21 @@ namespace NsMaTran
         {
             MT = mt;
         }
+        public MaTran(MaTran B)
+        {
+            newMaTran(B.M, B.N);
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    this[i, j] = B[i, j];
+                }
+            }
+            if (MTGhep != null)
+            {
+                MTGhep = B.MTGhep.Copy();
+            }
+        }
         public double this[int m, int n]
         {
             get
@@ -63,6 +78,58 @@ namespace NsMaTran
             get
             {
                 return demSoDongKhacKhong(true);
+            }
+        }
+        public static MaTran DonVi(int length)
+        {
+            var mtDonVi = new MaTran(length, length);
+            for (int i = 0; i < length; i++)
+            {
+                mtDonVi[i, i] = 1;
+            }
+            return mtDonVi;
+        }
+        public double ChuanVoCung
+        {
+            get
+            {
+                double big = 0;
+                for (int i = 0; i < M; i++)
+                {
+                    double line = 0;
+                    for (int j = 0; j < N; j++)
+                    {
+                        line += Math.Abs(this[i, j]);
+                    }
+                    if (line > big)
+                    {
+                        big = line;
+                    }
+                }
+                return big;
+            }
+        }
+        public bool isMaTranCheoTroi
+        {
+            get
+            {
+                for (int i = 0; i < M; i++)
+                {
+                    double line = 0;
+                    for (int j = 0; j < N; j++)
+                    {
+                        if (j == i)
+                        {
+                            continue;
+                        }
+                        line += Math.Abs(this[i, j]);
+                    }
+                    if (line >= Math.Abs(this[i, i]))
+                    {
+                        return false;
+                    }
+                }
+                return true;
             }
         }
         #endregion
@@ -301,6 +368,24 @@ namespace NsMaTran
         public static MaTran operator * (MaTran A,MaTran B)
         {
             return A.NhanVoiMaTran(B);
+        }
+        public static MaTran operator - (MaTran A)
+        {
+            var B = A.Copy();
+            for (int i = 0; i < B.M; i++)
+            {
+                for (int j = 0; j < B.N; j++)
+                {
+                    B[i, j] = -B[i, j];
+                }
+            }
+            return B;
+        }
+        public static MaTran operator - (MaTran A,MaTran B)
+        {
+            var C = new MaTran(A.M, A.N);
+            C = A + -B;
+            return C;
         }
         #endregion
         #region Private Method

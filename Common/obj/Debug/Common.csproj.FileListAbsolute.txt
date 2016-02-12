@@ -1,0 +1,5 @@
+C:\Users\pagon\Desktop\GiaiTichSo\Common\bin\Debug\Common.dll
+C:\Users\pagon\Desktop\GiaiTichSo\Common\bin\Debug\Common.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\pagon\Desktop\GiaiTichSo\Common\obj\Debug\Common.dll
+C:\Users\pagon\Desktop\GiaiTichSo\Common\obj\Debug\Common.pdb

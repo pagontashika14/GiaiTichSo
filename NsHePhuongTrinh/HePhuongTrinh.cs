@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NsMaTran;
+using Common;
 
 namespace NsHePhuongTrinh
 {
@@ -150,6 +151,54 @@ namespace NsHePhuongTrinh
             }
             return new Nghiem(0, 0);
         }
+        public Nghiem LapDon(double dkDung)
+        {
+            var mt = MT.Copy();
+            if (mt.M != mt.N)
+            {
+                throw new Exception("Không phải ma trận vuông");
+            }
+            if (!mt.isMaTranCheoTroi)
+            {
+                throw new Exception("Không phải ma trận chéo trội");
+            }
+            var a = new MaTran(mt.M, mt.N);
+            var b = new MaTran(mt.M, 1);
+            for (int i = 0; i < a.M; i++)
+            {
+                for (int j = 0; j < a.N; j++)
+                {
+                    if (j == i)
+                    {
+                        a[i, j] = 0;
+                        continue;
+                    }
+                    a[i, j] = -mt[i, j] / mt[i, i];
+                }
+                b[i, 0] = mt.MTGhep[i, 0] / mt[i, i];
+            }
+            var cstt = Function.ChuSoTinTuong(dkDung);
+            dkDung = dkDung - 0.5 * Math.Pow(10, -cstt);
+            double cvc = a.ChuanVoCung;
+            var x = new Nghiem(Status.NghiemDuyNhat, mt.M);
+            var x0 = x.Copy();
+            var x1 = a * x0 + b;
+            var soPhepLap =Math.Ceiling(
+                Math.Log(dkDung * (1 - cvc) / (x1 - x0).ChuanVoCung) 
+                / 
+                Math.Log(cvc)
+                );
+            for (int i = 0; i < soPhepLap; i++)
+            {
+                x = new Nghiem(a * x1 + b);
+                x1 = x.Copy();
+            }
+            for (int i = 0; i < x.M; i++)
+            {
+                x[i, 0] = Math.Round(x[i, 0], cstt);
+            }
+            return x;
+        }
         public override string ToString()
         {
             string s = "Hệ :\n";
@@ -171,6 +220,7 @@ namespace NsHePhuongTrinh
             }
             return s;
         }
+        
         #endregion
         #region Privare Method
         void dataToHPT(List<List<double>> data)
