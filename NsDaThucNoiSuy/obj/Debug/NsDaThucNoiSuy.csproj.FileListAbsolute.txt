@@ -1,0 +1,5 @@
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsDaThucNoiSuy.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsDaThucNoiSuy.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\obj\Debug\NsDaThucNoiSuy.csprojResolveAssemblyReference.cache
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\obj\Debug\NsDaThucNoiSuy.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\obj\Debug\NsDaThucNoiSuy.pdb

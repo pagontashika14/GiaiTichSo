@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using System.Linq;
 
-namespace NsMaTran
+namespace Common
 {
     public class ReadTxt
     {
@@ -39,7 +39,7 @@ namespace NsMaTran
                 List<string> ptu = line.Split(' ').ToList();
                 for (int i = 0; i < ptu.Count; i++)
                 {
-                    if(ptu[i] == "")
+                    if (ptu[i] == "")
                     {
                         ptu.RemoveAt(i);
                         i--;
