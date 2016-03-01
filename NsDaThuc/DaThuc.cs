@@ -6,20 +6,12 @@ using Common;
 
 namespace NsDaThuc
 {
-    class DaThuc
+    public class DaThuc
     {
         #region Constructor
         public DaThuc()
         {
             daThuc = new List<double>();
-        }
-        public DaThuc(int n)
-        {
-            daThuc = new List<double>();
-            for (int i = 0; i < n + 1; i++)
-            {
-                daThuc.Add(0);
-            }
         }
         public DaThuc(string file)
         {
@@ -77,7 +69,7 @@ namespace NsDaThuc
         #region Public
         public DaThuc Copy()
         {
-            var B = new DaThuc(N);
+            var B = new DaThuc();
             for (int i = 0; i < N + 1; i++)
             {
                 B[i] = this[i];
@@ -167,13 +159,13 @@ namespace NsDaThuc
             DaThuc C = lon.Copy();
             for (int i = 0; i < be.N + 1; i++)
             {
-                C[i] += B[i];
+                C[i] += be[i];
             }
             return C;
         }
         public DaThuc DoiDau()
         {
-            var C = new DaThuc(N);
+            var C = new DaThuc();
             for (int i = 0; i < N + 1; i++)
             {
                 C[i] = -this[i];
@@ -204,13 +196,20 @@ namespace NsDaThuc
             {
                 throw new Exception("Bậc của đa thức nhỏ hơn 2");
             }
-            KetQua = new DaThuc(N - 1);
+            KetQua = new DaThuc();
             KetQua[N - 1] = this[N];
             for (int i = KetQua.N - 1; i >= 0; i--)
             {
                 KetQua[i] = c * KetQua[i + 1] + this[i + 1];
             }
             SoDu = c * KetQua[0] + this[0];
+        }
+        public double Tinh(double x)
+        {
+            double ketQua = 0;
+            var B = this.Copy();
+            Horner(x, ref B, ref ketQua);
+            return ketQua;
         }
         public DaThuc ChiaChoDaThucBac1(DaThuc B, ref double soDu)
         {
@@ -298,7 +297,7 @@ namespace NsDaThuc
         delegate void phepTinhVoiSo(ref double ketQua);
         static DaThuc PhepTinhVoiSo(DaThuc A, phepTinhVoiSo phepTinh)
         {
-            var B = new DaThuc(A.N);
+            var B = A.Copy();
             for (int i = 0; i < A.N + 1; i++)
             {
                 double temp = B[i];

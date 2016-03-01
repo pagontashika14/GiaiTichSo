@@ -10,13 +10,11 @@ namespace NsDaThuc
         static void Main(string[] args)
         {
             var a = new DaThuc(@"DaThuc\a.txt");
+            var b = new DaThuc(@"DaThuc\b.txt");
             Console.WriteLine((a).ToString());
+            Console.WriteLine((b).ToString());
             Console.WriteLine("============================");
-            DaThuc test = null;
-            double soDu = 0;
-            test = a.DaoHam();
-            Console.WriteLine(test.ToString());
-            //Console.WriteLine("So du: {0}", soDu);
+            Console.WriteLine((a+b).ToString());
             Console.ReadLine();
         }
     }

@@ -3,3 +3,4 @@ C:\Users\pagon\Desktop\GiaiTichSo\NsFxBang0\bin\Debug\NsFxBang0.exe
 C:\Users\pagon\Desktop\GiaiTichSo\NsFxBang0\bin\Debug\NsFxBang0.pdb
 C:\Users\pagon\Desktop\GiaiTichSo\NsFxBang0\obj\Debug\NsFxBang0.exe
 C:\Users\pagon\Desktop\GiaiTichSo\NsFxBang0\obj\Debug\NsFxBang0.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsFxBang0\obj\Debug\NsFxBang0.csprojResolveAssemblyReference.cache

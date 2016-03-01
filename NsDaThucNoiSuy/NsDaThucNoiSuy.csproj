@@ -41,8 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DaThucNoiSuy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{8d2fc3f7-42f4-44ab-b68d-7d9fa46f6d73}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NsDaThuc\NsDaThuc.csproj">
+      <Project>{f6e40da7-1c0a-4c39-bc50-9c0b6e8049e9}</Project>
+      <Name>NsDaThuc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NsMaTran\NsMaTran.csproj">
+      <Project>{841767bf-afab-4447-9376-dbb886948234}</Project>
+      <Name>NsMaTran</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

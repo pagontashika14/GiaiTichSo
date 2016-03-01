@@ -171,7 +171,7 @@ namespace NsMaTran
                     }
                     else
                     {
-                        s = string.Format("{0}{1,-8:0.000000}  ", s, this[i, j]);
+                        s = string.Format("{0}{1,-8:0.0000}  ", s, this[i, j]);
                     }
                 }
                 if (MTGhep != null)
@@ -185,7 +185,7 @@ namespace NsMaTran
                         }
                         else
                         {
-                            s = string.Format("{0}{1,-8:0.000000}  ", s, MTGhep[i, j]);
+                            s = string.Format("{0}{1,-8:0.0000}  ", s, MTGhep[i, j]);
                         }
                     }
                 }
