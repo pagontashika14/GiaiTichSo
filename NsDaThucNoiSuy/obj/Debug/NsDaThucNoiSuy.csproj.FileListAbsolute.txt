@@ -1,0 +1,11 @@
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsDaThucNoiSuy.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsDaThucNoiSuy.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\obj\Debug\NsDaThucNoiSuy.csprojResolveAssemblyReference.cache
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\obj\Debug\NsDaThucNoiSuy.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\obj\Debug\NsDaThucNoiSuy.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\Common.dll
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsDaThuc.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsMaTran.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\Common.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsDaThuc.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThucNoiSuy\bin\Debug\NsMaTran.pdb

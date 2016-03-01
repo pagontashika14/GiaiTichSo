@@ -15,5 +15,9 @@ namespace Common
             }
             return i;
         }
+        public static void ConsoleTiengViet()
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+        }
     }
 }

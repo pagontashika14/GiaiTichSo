@@ -1,0 +1,7 @@
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\bin\Debug\NsDaThuc.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\bin\Debug\NsDaThuc.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\obj\Debug\NsDaThuc.csprojResolveAssemblyReference.cache
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\obj\Debug\NsDaThuc.exe
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\obj\Debug\NsDaThuc.pdb
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\bin\Debug\Common.dll
+C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\bin\Debug\Common.pdb

@@ -199,6 +199,10 @@ namespace NsHePhuongTrinh
             }
             return x;
         }
+        public Nghiem BaDuongCheo()
+        {
+            return baDuongCheo(0);
+        }
         public override string ToString()
         {
             string s = "Hệ :\n";
@@ -247,6 +251,10 @@ namespace NsHePhuongTrinh
             }
             MT = new MaTran(A);
             MT.MTGhep = new MaTran(B);
+        }
+        Nghiem baDuongCheo(int m)
+        {
+            return null;
         }
         #endregion
     }
