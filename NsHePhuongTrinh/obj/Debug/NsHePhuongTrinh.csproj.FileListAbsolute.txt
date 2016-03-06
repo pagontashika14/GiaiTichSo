@@ -8,3 +8,13 @@ C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.exe
 C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.pdb
 C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\bin\Debug\Common.dll
 C:\Users\pagon\Desktop\GiaiTichSo\NsHePhuongTrinh\bin\Debug\Common.pdb
+E:\GiaiTichSo2\NsHePhuongTrinh\bin\Debug\NsHePhuongTrinh.exe.config
+E:\GiaiTichSo2\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.exe
+E:\GiaiTichSo2\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.pdb
+E:\GiaiTichSo2\NsHePhuongTrinh\bin\Debug\NsHePhuongTrinh.exe
+E:\GiaiTichSo2\NsHePhuongTrinh\bin\Debug\NsHePhuongTrinh.pdb
+E:\GiaiTichSo2\NsHePhuongTrinh\bin\Debug\Common.dll
+E:\GiaiTichSo2\NsHePhuongTrinh\bin\Debug\NsMaTran.exe
+E:\GiaiTichSo2\NsHePhuongTrinh\bin\Debug\Common.pdb
+E:\GiaiTichSo2\NsHePhuongTrinh\bin\Debug\NsMaTran.pdb
+E:\GiaiTichSo2\NsHePhuongTrinh\obj\Debug\NsHePhuongTrinh.csprojResolveAssemblyReference.cache

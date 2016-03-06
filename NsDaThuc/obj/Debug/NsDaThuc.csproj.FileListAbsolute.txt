@@ -5,3 +5,10 @@ C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\obj\Debug\NsDaThuc.exe
 C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\obj\Debug\NsDaThuc.pdb
 C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\bin\Debug\Common.dll
 C:\Users\pagon\Desktop\GiaiTichSo\NsDaThuc\bin\Debug\Common.pdb
+E:\GiaiTichSo2\NsDaThuc\bin\Debug\NsDaThuc.exe
+E:\GiaiTichSo2\NsDaThuc\bin\Debug\NsDaThuc.pdb
+E:\GiaiTichSo2\NsDaThuc\bin\Debug\Common.dll
+E:\GiaiTichSo2\NsDaThuc\bin\Debug\Common.pdb
+E:\GiaiTichSo2\NsDaThuc\obj\Debug\NsDaThuc.csprojResolveAssemblyReference.cache
+E:\GiaiTichSo2\NsDaThuc\obj\Debug\NsDaThuc.exe
+E:\GiaiTichSo2\NsDaThuc\obj\Debug\NsDaThuc.pdb
