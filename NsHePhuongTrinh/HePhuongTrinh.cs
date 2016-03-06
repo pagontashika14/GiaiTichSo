@@ -41,16 +41,16 @@ namespace NsHePhuongTrinh
                 nghiem = new Nghiem(Status.NghiemDuyNhat, sdk0);
                 for (int i = sdk0 - 1; i >= 0; i--)
                 {
-                    nghiem[i,0] = mt.MTGhep[i, 0];
+                    nghiem[i, 0] = mt.MTGhep[i, 0];
                     for (int j = 0; j < mt.N; j++)
                     {
                         if (mt[i, j] == 0 || j == i)
                         {
                             continue;
                         }
-                        nghiem[i,0] -= mt[i, j] * nghiem[j,0];
+                        nghiem[i, 0] -= mt[i, j] * nghiem[j, 0];
                     }
-                    nghiem[i,0] /= mt[i, i];
+                    nghiem[i, 0] /= mt[i, i];
                 }
                 return nghiem;
             }
@@ -126,7 +126,7 @@ namespace NsHePhuongTrinh
                 nghiem = new Nghiem(Status.NghiemDuyNhat, sdk0);
                 foreach (KeyValuePair<int, int> item in luuHang)
                 {
-                    nghiem[item.Value,0] = mt.MTGhep[item.Key, 0] / mt[item.Key, item.Value];
+                    nghiem[item.Value, 0] = mt.MTGhep[item.Key, 0] / mt[item.Key, item.Value];
                 }
                 return nghiem;
             }
@@ -183,9 +183,9 @@ namespace NsHePhuongTrinh
             var x = new Nghiem(Status.NghiemDuyNhat, mt.M);
             var x0 = x.Copy();
             var x1 = a * x0 + b;
-            var soPhepLap =Math.Ceiling(
-                Math.Log(dkDung * (1 - cvc) / (x1 - x0).ChuanVoCung) 
-                / 
+            var soPhepLap = Math.Ceiling(
+                Math.Log(dkDung * (1 - cvc) / (x1 - x0).ChuanVoCung)
+                /
                 Math.Log(cvc)
                 );
             for (int i = 0; i < soPhepLap; i++)
@@ -201,7 +201,23 @@ namespace NsHePhuongTrinh
         }
         public Nghiem BaDuongCheo()
         {
-            return baDuongCheo(0);
+            var n = MT.N;
+            var alpha = Function.KhoiTaoList(n+1);
+            var beta = Function.KhoiTaoList(n+1);
+            alpha[1] = bdcB(0)/bdcC(0);
+            beta[1] = MT.MTGhep[0, 0];
+            for (int i = 1; i < n-1; i++)
+            {
+                alpha[i + 1] = bdcB(i) / (bdcC(i) - alpha[i] * bdcA(i));
+                beta[i + 1] = (bdcA(i) * beta[i] + MT.MTGhep[i, 0]) / (bdcC(i) - alpha[i] * bdcA(i));
+            }
+            var nghiem = new Nghiem(Status.NghiemDuyNhat, n);
+            nghiem[n-1,0] = (bdcA(n-1) * beta[n-1] + MT.MTGhep[n-1, 0]) / (bdcC(n-1));
+            for (int i = n-2; i >= 0; i--)
+            {
+                nghiem[i, 0] = alpha[i + 1] * nghiem[i + 1, 0] + beta[i + 1];
+            }
+            return nghiem;
         }
         public override string ToString()
         {
@@ -224,7 +240,7 @@ namespace NsHePhuongTrinh
             }
             return s;
         }
-        
+
         #endregion
         #region Privare Method
         void dataToHPT(List<List<double>> data)
@@ -252,9 +268,17 @@ namespace NsHePhuongTrinh
             MT = new MaTran(A);
             MT.MTGhep = new MaTran(B);
         }
-        Nghiem baDuongCheo(int m)
+        double bdcA(int index)
         {
-            return null;
+            return MT[index, index - 1];
+        }
+        double bdcB(int index)
+        {
+            return MT[index, index + 1];
+        }
+        double bdcC(int index)
+        {
+            return -MT[0, 0];
         }
         #endregion
     }

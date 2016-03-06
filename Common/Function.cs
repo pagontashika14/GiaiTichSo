@@ -19,5 +19,14 @@ namespace Common
         {
             Console.OutputEncoding = Encoding.UTF8;
         }
+        public static List<double> KhoiTaoList(int length)
+        {
+            var list = new List<double>();
+            for (int i = 0; i < length; i++)
+            {
+                list.Add(0);
+            }
+            return list;
+        }
     }
 }
